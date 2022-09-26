@@ -1,0 +1,127 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url("BungeeSpice-Regular.ttf");
+}
+.gridcontainer {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 15% 35% 15% 35%;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "banniere1"
+    "header1"
+    "banniere2";
+}
+.headerA {
+  background-color: gray;
+}
+#header {
+  grid-area: header;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banniere1 {
+  grid-area: banniere1;
+  width: 80%;
+  height: 80%;
+
+  font-size: 5em;
+  font-family: "Font1";
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-family: "Brush Script MT", cursive;
+  text-shadow: 2px 2px gray;
+
+  animation: color_change 2s infinite alternate;
+}
+#header1 {
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background-color: gray;
+}
+#banniere2 {
+  grid-area: banniere2;
+  width: 80%;
+  height: 80%;
+  background: rgb(228, 65, 65);
+  background: radial-gradient(
+    circle,
+    rgba(228, 65, 65, 1) 0%,
+    rgba(201, 138, 70, 1) 50%,
+    rgba(227, 255, 0, 1) 100%
+  );
+  box-shadow: 10px 10px 5px #4d4b4b;
+  font-size: 5em;
+  font-family: "Font1";
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-family: "Font2";
+  transition: transform 0.3s ease-out;
+  display: inline-block;
+}
+#banniere2:hover {
+  transform: translate(0, -20px);
+}
+.fa-solid {
+  display: flex;
+  font-size: 3em;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+@keyframes color_change {
+  0% {
+    background-color: blue;
+  }
+  100% {
+    background-color: aqua;
+  }
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+#nav li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: gray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+a {
+  display: block;
+  padding: 10px;
+  background-color: lightgray;
+}
+#animate:hover {
+  transform: translate(0, -10px);
+  transition: transform 0.3s ease-out;
+  display: inline-block;
+}
