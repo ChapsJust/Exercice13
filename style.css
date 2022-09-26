@@ -1,3 +1,7 @@
+:root{
+  --blue:blue;
+  --aqua:aqua;
+}
 html,
 body {
   height: 100%;
@@ -44,7 +48,7 @@ body {
   font-family: "Brush Script MT", cursive;
   text-shadow: 2px 2px gray;
 
-  animation: color_change 2s infinite alternate;
+  animation: --colorchange 2s infinite alternate;
 }
 #header1 {
   font-size: 4em;
@@ -83,12 +87,12 @@ body {
   justify-content: flex-end;
   align-self: flex-end;
 }
-@keyframes color_change {
+@keyframes --colorchange {
   0% {
-    background-color: blue;
+    background-color: var(--blue);
   }
   100% {
-    background-color: aqua;
+    background-color: var(--aqua);
   }
 }
 ul {
@@ -120,8 +124,10 @@ a {
   padding: 10px;
   background-color: lightgray;
 }
-#animate:hover {
-  transform: translate(0, -10px);
+#animate{
   transition: transform 0.3s ease-out;
   display: inline-block;
+}
+#animate:hover {
+  transform: translate(0, -10px);
 }
