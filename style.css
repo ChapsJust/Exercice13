@@ -11,8 +11,8 @@ body {
 }
 
 @font-face {
-  font-family: "Font2";
-  src: url("BungeeSpice-Regular.ttf");
+  font-family: "antoine";
+  src: url("18627.ttf");
 }
 .gridcontainer {
   height: 100vh;
@@ -57,27 +57,24 @@ body {
   align-self: center;
   background-color: gray;
 }
-#banniere2 {
-  grid-area: banniere2;
-  width: 80%;
-  height: 80%;
-  background: rgb(228, 65, 65);
-  background: radial-gradient(
-    circle,
-    rgba(228, 65, 65, 1) 0%,
-    rgba(201, 138, 70, 1) 50%,
-    rgba(227, 255, 0, 1) 100%
-  );
-  box-shadow: 10px 10px 5px #4d4b4b;
-  font-size: 5em;
-  font-family: "Font1";
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  font-family: "Font2";
-  transition: transform 0.3s ease-out;
-  display: inline-block;
+
+#banniere2{
+    grid-area: banniere2;
+    text-align: center;
+    font-size: 8em;
+    background: linear-gradient(black, white, grey);
+    font-family: "antoine";
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    transition: transform 1s ease-out;
+    display: inline-flexbox;
+    text-shadow: 20px 20px grey;
+    box-shadow: 4px 4px 4px black;
+    
+
 }
+
 #banniere2:hover {
   transform: translate(0, -20px);
 }
